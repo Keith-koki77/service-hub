@@ -6,7 +6,7 @@ $ git clone https://github.com/rodgersxy/service-hub.git
 $ cd cd service-hub
 $
 $ # Virtualenv modules installation (Unix based systems)
-$ virtualenv venv
+$ python3 -m venv venv
 $ source venv/bin/activate
 $
 $ # Virtualenv modules installation (Windows based systems)
@@ -21,7 +21,7 @@ $ python manage.py makemigrations
 $ python manage.py migrate
 $
 $ # Start the application (development mode)
-$ python manage.py runserver # default port 8000
+$ python3 manage.py runserver # default port 8000
 $
 $ # Start the app - custom port
 $ # python manage.py runserver 0.0.0.0:<your_port>
@@ -40,7 +40,7 @@ The project is coded using a simple and intuitive structure presented bellow:
 ```bash
 < PROJECT ROOT >
    |
-   |-- project/                               # Implements app configuration
+   |-- portfolio/                               # Implements app configuration
    |    |-- settings.py                    # Defines Global Settings
    |    |-- wsgi.py                        # Start the app in production
    |    |-- urls.py                        # Define URLs served by all apps/nodes
