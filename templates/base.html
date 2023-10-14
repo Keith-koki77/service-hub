@@ -1,0 +1,51 @@
+<!-- templates/base.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>{% block title %}My Personal Portfolio{% endblock title %}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Custom CSS for navbar and button */
+        .navbar-custom {
+            background-color: #02082b; /* Dark blue background color */
+        }
+        .btn-custom {
+            background-color: #07960c; /* Green button color */
+            border: none;
+        }
+        .btn-custom:hover {
+            background-color: #45a049; /* Green button color on hover */
+        }
+    </style>
+</head>
+<body class="container-fluid"> <!-- Use container-fluid to stretch the navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
+        <a class="navbar-brand" href="#">SERVICE-HUB</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">FIND A GIG</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">FIND FREELANCERS
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">BACK TO HOME PAGE
+                    </a>
+                </li>
+                <!-- Add more navigation links as needed -->
+            </ul>
+        </div>
+        <a class="btn btn-custom ml-auto" href="#">Sign In/Register</a>
+    </nav>
+    {% block page_content %}{% endblock page_content %}
+</body>
+</html>
+
+
